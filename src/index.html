@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+
+<!-- ************************ IMPORTANT INFORMATION ************************************
+  This web basic template is provided as an example of how to configure
+  a JET web application.  It contains the Oracle JET framework and a default
+  requireJS configuration file to show how JET can be setup in a common application.
+  This project template can be used in conjunction with demo code from the JET
+  website to test JET component behavior and interactions.
+
+  Any CSS styling with the prefix "demo-" is for demonstration only and is not
+  provided as part of the JET framework.
+
+  Please see the demos under Cookbook/Patterns/App Shell: Web and the CSS documentation
+  under Support/API Docs/Non-Component Styling on the JET website for more information on how to use
+  the best practice patterns shown in this template.
+
+  Aria Landmark role attributes are added to the different sections of the application
+  for accessibility compliance. If you change the type of content for a specific
+  section from what is defined, you should also change the role value for that
+  section to represent the appropriate content type.
+  ***************************** IMPORTANT INFORMATION ************************************ -->
+<html lang="en-us">
+
+<head>
+  <title>Oracle JET Starter Template - Web Basic</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1">  
+  <link rel="icon" href="css/images/favicon.ico" type="image/x-icon" />
+
+  <!-- This is the main css file for the default theme -->
+		<!-- injector:theme -->
+		<!-- endinjector -->
+  <!-- This contains icon fonts used by the starter template -->
+  <link rel="stylesheet" id="uxiconFont" href="https://static.oracle.com/cdn/fnd/gallery/2107.3.0/images/iconfont/ojuxIconFont.min.css">
+
+  <!-- This is where you would add any app specific styling -->
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+
+</head>
+
+<body class="oj-web-applayout-body">
+  <div id="globalBody" class="oj-web-applayout-page">
+    <!--
+         ** Oracle JET V11.1.0 web application header pattern.
+         ** Please see the demos under Cookbook/Patterns/App Shell: Web
+         ** and the CSS documentation under Support/API Docs/Non-Component Styling
+         ** on the JET website for more information on how to use this pattern.
+      -->
+    <header role="banner" class="oj-web-applayout-header">
+     
+    </header>
+    <div role="main" class="oj-web-applayout-max-width oj-web-applayout-content oj-flex">                
+      <!-- Place your page content here -->                         
+      
+        <div id="container"">            
+                
+            <div class="oj-flex">
+                <div class="oj-flex-item oj-sm-8">
+                    <div class="oj-flex">
+                        <div class="oj-flex-item">
+                            <oj-list-item-layout>                                
+                                <oj-avatar
+                                role="img" slot="leading"
+                                initials="DS"
+                                :aria-label="Francisca Herrera"
+                                :title="Francisca Herrera">                                
+                                </oj-avatar>
+                                <span style="font-size:30px">Diego Soto Jara</span>   
+                                <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">
+                                    Civil Engineering in Computer Science
+                                </span>
+                            </oj-list-item-layout>                         
+                        </div>                  
+                    </div>
+                </div>
+                
+                <div class="oj-flex-item oj-sm-4">
+                    
+                    <div class="oj-flex">
+                          <div class="oj-flex-item">                            
+                                  <oj-list-view id="listview" aria-label="list with static data" data-oj-binding-provider="none" >                            
+                                    <ul id="contact" style="float:right">
+                                        <li>
+                                          <oj-list-item-layout>
+                                            <span slot="leading" class="oj-ux-ico-email" style="font-size: large"></span>                                                                     
+                                            <span slot="secondary" class="oj-typography-body-xs oj-text-color-secondary">
+                                              diego.abelardo.soto@gmail.com
+                                            </span>
+                                          </oj-list-item-layout>
+                                        </li>                                                             
+                                        <li>
+                                          <oj-list-item-layout>
+                                            <span slot="leading" class="oj-ux-ico-github" style="font-size: large"></span>                                                                     
+                                            <span slot="secondary" class="oj-typography-body-xs oj-text-color-secondary">
+                                              https://github.com/diego1982chile
+                                            </span>
+                                          </oj-list-item-layout>
+                                        </li>                   
+                                        <!--li>
+                                          <oj-list-item-layout>
+                                            <span slot="leading" class="oj-ux-ico-location-pin" style="font-size: large"></span>                                                                     
+                                            <span slot="secondary" class="oj-typography-body-xs oj-text-color-secondary">
+                                              Av. Canal Troncal San Francisco 901 – 32, Puente Alto, Santiago
+                                            </span>
+                                          </oj-list-item-layout>
+                                        </li-->                                              
+                                        <li>
+                                          <oj-list-item-layout>
+                                            <span slot="leading" class=" oj-ux-ico-phone"></span>                                                                     
+                                            <span slot="secondary" class="oj-typography-body-xs oj-text-color-secondary">
+                                              +(56 9) 56582261
+                                            </span>
+                                          </oj-list-item-layout>
+                                        </li>                                              
+                                    </ul>                                                                                       
+                                </oj-list-view>                                                         
+                       
+                        </div>                      
+                    </div>
+
+                </div>  
+                
+                <div class="oj-flex-item oj-sm-4 oj-sm-padding-2x">
+                                    
+
+                  <div class="oj-flex">
+                    <div class="oj-flex-item">
+                      SUMMARY
+                      <hr class="separator"/>      
+                      <div class="oj-flex">
+                          <div class="oj-flex-item">
+                            <oj-list-view id="listview" aria-label="list with static data" data-oj-binding-provider="none">
+                                <ul id="summary">
+                                    <li>
+                                      <oj-list-item-layout>
+                                        <span slot="secondary" class="oj-typography-body-xs oj-text-color-secondary">
+                                            <p>
+                                                Civil Engineer in Computer Science
+                                                with more than 10 years of experience
+                                                working in various national scope as
+                                                well as enterprise projects. Mainly
+                                                focused in java, as well as familiar with
+                                                DevOps practices.
+                                            <p/>
+                                        </span>  
+                                      </oj-list-item-layout>
+                                    </li>
+                                </ul>
+                            </oj-list-view>                                                                
+                          </div>                      
+                      </div>
+                    </div>                  
+                  </div>                     
+                  <div class="oj-flex">
+                    <div class="oj-flex-item">
+                      SKILLS
+                      <hr class="separator"/>       
+                      <div class="oj-flex">
+                          <div class="oj-flex-item">                            
+                            <p>                                
+                                <span class="oj-badge oj-badge-warning oj-badge-subtle">Java SE</span>                                
+                                <span class="oj-badge oj-badge-warning oj-badge-subtle">Java EE</span>                                
+                                <span class="oj-badge oj-badge-warning oj-badge-subtle">Microprofile</span>                                
+                                <span class="oj-badge oj-badge-warning oj-badge-subtle">Spring Boot</span>                                
+                                <span class="oj-badge oj-badge-warning oj-badge-subtle">Git</span>   
+                                <span class="oj-badge oj-badge-warning oj-badge-subtle">Docker</span>   
+                                <span class="oj-badge oj-badge-warning oj-badge-subtle">.Net MVC</span>
+                                <span class="oj-badge oj-badge-warning oj-badge-subtle">AWS</span>
+                                <span class="oj-badge oj-badge-warning oj-badge-subtle">SQL</span>                                
+                            </p>                            
+                          </div>                      
+                      </div>
+                    </div>                  
+                  </div>
+                    
+                  <div class="oj-flex">
+                    <div class="oj-flex-item">
+                      CERTIFICATIONS
+                      <hr class="separator"/>      
+                      <div class="oj-flex">
+                          <div class="oj-flex-item">
+                            <oj-list-view id="listview" aria-label="list with static data" data-oj-binding-provider="none">
+                            <ul id="certifications">
+                                <li id="chrisblack">
+                                  <oj-list-item-layout>
+                                    <oj-avatar slot="leading" size="xs" src="/css/images/08_Associate_OCI_Architect_2019_1.png"></oj-avatar>
+                                    <span class="oj-typography-body-sm oj-text-color-primary">
+                                        Oracle Certified Associate, Java SE 8 Programmer
+                                    </span>                                                                          
+                                    <span slot="secondary" class="oj-typography-body-xs oj-text-color-secondary">
+                                        Expedition: ene 2019
+                                    </span>
+                                  </oj-list-item-layout>
+                                </li>                                                             
+                                <li id="chrisblack">
+                                  <oj-list-item-layout>
+                                    <oj-avatar slot="leading" size="xs" src="/css/images/08_Associate_OCI_Architect_2019.png"></oj-avatar>
+                                    <span class="oj-typography-body-sm oj-text-color-primary">
+                                        Cloud Infrastructure 2019 Certified Architect
+                                    </span>                                                                          
+                                    <span slot="secondary" class="oj-typography-body-xs oj-text-color-secondary">
+                                        Expedition: jul 2020
+                                    </span>
+                                  </oj-list-item-layout>
+                                </li>   
+                                <li id="chrisblack">
+                                  <oj-list-item-layout>
+                                    <oj-avatar slot="leading" size="xs" src="/css/images/03_Oracle_Cloud_Infrastructure_Foundations_Associate.png"></oj-avatar>
+                                    <span class="oj-typography-body-sm oj-text-color-primary">
+                                        Cloud Infraestructure Foundations 2020 Certified Associate
+                                    </span>                                                                          
+                                    <span slot="secondary" class="oj-typography-body-xs oj-text-color-secondary">
+                                        Expedition: jul 2020
+                                    </span>
+                                  </oj-list-item-layout>
+                                </li>  
+                                <li id="chrisblack">
+                                  <oj-list-item-layout>
+                                    <oj-avatar slot="leading" size="xs" src="/css/images/Oracle_Specialist_Badge.png"></oj-avatar>
+                                    <span class="oj-typography-body-sm oj-text-color-primary">
+                                        Oracle Autonomous Database Cloud 2019 Certified Specialist
+                                    </span>                                                                          
+                                    <span slot="secondary" class="oj-typography-body-xs oj-text-color-secondary">
+                                        Expedition: jul 2019
+                                    </span>
+                                  </oj-list-item-layout>
+                                </li>                                 
+                            </ul>
+                            </oj-list-view>
+                          </div>                      
+                      </div>
+                    </div>                  
+                 </div>                                    
+                  <br/>        
+                  <div class="oj-flex">
+                    <div class="oj-flex-item">
+                      REFERENCES
+                      <hr class="separator"/>      
+                      <div class="oj-flex">
+                          <div class="oj-flex-item">
+                            <oj-list-view id="listview" aria-label="list with static data" data-oj-binding-provider="none">
+                            <ul id="references">
+                                <li id="chrisblack">
+                                  <oj-list-item-layout>
+                                    <span class="oj-typography-body-sm oj-text-color-primary">
+                                        Mario Sáez
+                                    </span>                                                                          
+                                    <span slot="secondary" class="oj-typography-body-xs oj-text-color-secondary">
+                                      Gerente Comercial
+                                    </span>
+                                    <span slot="tertiary" class="oj-typography-body-xs oj-text-color-secondary">
+                                      mario.saez@trends.cl
+                                    </span>
+                                  </oj-list-item-layout>
+                                </li>                                                             
+                                <li id="chrisblack">
+                                  <oj-list-item-layout>
+                                    <span class="oj-typography-body-sm oj-text-color-primary">
+                                        Luis Berríos
+                                    </span>                                                                          
+                                    <span slot="secondary" class="oj-typography-body-xs oj-text-color-secondary">
+                                        IT Manager
+                                    </span>
+                                    <span slot="tertiary" class="oj-typography-body-xs oj-text-color-secondary">
+                                      luis.berrios.p@gmail.com
+                                    </span>
+                                  </oj-list-item-layout>
+                                </li>     
+                            </ul>
+                            </oj-list-view>
+                          </div>                      
+                      </div>
+                    </div>                  
+                  </div>
+                </div>
+                
+                <div class="oj-flex-item oj-sm-8 oj-sm-padding-2x">
+                    
+                    <div class="oj-flex">
+                        <div class="oj-flex-item oj-sm-12">
+                        CAREER HISTORY
+                        <hr class="separator"/> 
+                        <oj-list-view id="listview" aria-label="list with static data" data-oj-binding-provider="none">
+                            <ul id="career">
+                                <li id="chrisblack">
+                                  <oj-list-item-layout>
+                                    <span class="oj-typography-body-md oj-text-color-primary">
+                                        Globant, Santiago, RM
+                                    </span>                                                                          
+                                    <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">
+                                      Java Backend Developer SSr. -SSr. Advance
+                                    </span>
+                                    <span slot="tertiary" class="oj-typography-body-xs oj-text-color-secondary">
+                                        <p>
+                                           Documentation on various components of SOAjBPM Solution for CustodiaMetropolitana. 
+                                           Development of an Android application for tow truck drivers.
+                                        </p>
+                                    </span>
+                                    <span slot="action" class="oj-typography-body-xs oj-text-color-primary">
+                                        Dec. 2021 - present
+                                    </span>                                    
+                                  </oj-list-item-layout>
+                                </li>
+                                <li id="chrisblack">
+                                    <oj-list-item-layout>
+                                    <span class="oj-typography-body-md oj-text-color-primary">
+                                        Trends Tecnología, Santiago, RM
+                                    </span>                                                                          
+                                    <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">
+                                        Software Developer, System Engineer
+                                    </span>
+                                    <span slot="tertiary" class="oj-typography-body-xs oj-text-color-secondary">
+                                        <p>
+                                            Migration and sustainment in AWS of an OnPremiseCardHolder Number System,
+                                            complying with PCI DSS Level 1 standard. Responsible of Comunidad Digital
+                                            project consisting of deployment of various Wordpress sites through AWS Cloud
+                                            Services
+                                        </p>
+                                    </span>
+                                    <span slot="action" class="oj-typography-body-xs oj-text-color-primary">
+                                        Mar. 2019 – Nov. 2021
+                                    </span> 
+                                  </oj-list-item-layout>
+                                </li> 
+                                <li id="chrisblack">
+                                    <oj-list-item-layout>
+                                    <span class="oj-typography-body-md oj-text-color-primary">
+                                        Medical Trends, Santiago, RM
+                                    </span>
+                                    <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">
+                                        Software Developer
+                                    </span>
+                                    <span slot="tertiary" class="oj-typography-body-xs oj-text-color-secondary">
+                                        <p>
+                                            Part of developmnent team responsible for the implementation of a
+                                            Terminology Server (Semantikos) for Minsal, a key piece in e-Health
+                                            plan.Responsible for the DB migration for the same project. Part of the
+                                            sustaiment team for Health Guarantees Monitoring system (SIGGES) for
+                                            FONASA.
+                                        </p>
+                                    </span>
+                                    <span slot="action" class="oj-typography-body-xs oj-text-color-primary">
+                                        Jan. 2016 – Feb. 2019
+                                    </span> 
+                                    </oj-list-item-layout>
+                                </li>  
+                                <li id="chrisblack">
+                                    <oj-list-item-layout>
+                                    <span class="oj-typography-body-md oj-text-color-primary">
+                                        Implementa, Santiago, RM
+                                    </span>
+                                    <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">
+                                        Application Developer
+                                    </span>
+                                    <span slot="tertiary" class="oj-typography-body-xs oj-text-color-secondary">
+                                        <p>
+                                            Documentation on various components of SOAjBPM Solution for
+                                            CustodiaMetropolitana. Development of an Android application for tow truck
+                                            drivers.
+                                        </p>
+                                    </span>
+                                    <span slot="action" class="oj-typography-body-xs oj-text-color-primary">
+                                        Jul. 2014 – Dec. 2015
+                                    </span> 
+                                    </oj-list-item-layout>
+                                </li>
+                                <li id="chrisblack">
+                                    <oj-list-item-layout>
+                                    <span class="oj-typography-body-md oj-text-color-primary">
+                                        Cademsmart, Santiago, RM
+                                    </span>
+                                    <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">
+                                        Application Developer
+                                    </span>
+                                    <span slot="tertiary" class="oj-typography-body-xs oj-text-color-secondary">
+                                        <p>
+                                            Part of the development team for Web Standard Project - A web Application for
+                                            visualization of market metrics for clients. Developer on Red Bull Project, a small
+                                            quiz mobile app.
+                                        </p>
+                                    </span>
+                                    <span slot="action" class="oj-typography-body-xs oj-text-color-primary">
+                                        Jan. 2013 – Sep. 2013
+                                    </span> 
+                                    </oj-list-item-layout>
+                                </li>     
+                                <li id="chrisblack">
+                                    <oj-list-item-layout>
+                                    <span class="oj-typography-body-md oj-text-color-primary">
+                                        Artelamp, Santiago, RM
+                                    </span>
+                                    <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">
+                                        Analyst
+                                    </span>
+                                    <span slot="tertiary" class="oj-typography-body-xs oj-text-color-secondary">
+                                        <p>
+                                            Part of the team of analysts and developers in charge of developing multiple
+                                            modules for the enterprise management, such as billing, imports, among
+                                            others.
+                                        </p>
+                                    </span>
+                                    <span slot="action" class="oj-typography-body-xs oj-text-color-primary">
+                                        Jan. 2010 – Dec. 2012
+                                    </span> 
+                                    </oj-list-item-layout>
+                                </li>                                 
+                            </ul>
+                        </oj-list-view>
+                        </div>
+                    </div>                                                                                    
+                                                
+                    <div class="oj-flex">
+                        <div class="oj-flex-item">
+                        EDUCATION
+                        <hr class="separator"/>
+                        <oj-list-view id="listview" aria-label="list with static data" data-oj-binding-provider="none">
+                            <ul id="education">
+                                <li id="chrisblack">
+                                  <oj-list-item-layout>
+                                        <span class="oj-typography-body-md oj-text-color-primary">
+                                            Universidad de Santiago de Chile, Santiago, RM
+                                        </span>                                                                          
+                                        <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">
+                                          Civil engineering in computer science
+                                        </span>
+                                        <span slot="tertiary" class="oj-typography-body-xs oj-text-color-secondary">
+                                            <p>
+                                                Graduation report: “Evaluation of a Cellular Genetic Algorithm for geometric
+                                                problems” – Heuristic Optimization (professor guide Victor ParadaDazza).
+                                            </p>
+                                        </span>
+                                        <span slot="action" class="oj-typography-body-xs oj-text-color-primary">
+                                          Jan. 2003 – Dec. 2013
+                                        </span>
+                                  </oj-list-item-layout>
+                                </li>
+                            </ul>
+                        </oj-list-view>
+                    </div>                        
+                        
+
+                </div>
+              </div>
+          
+        </div>    
+                    
+      
+        </div>
+        
+        <div class="j-xl-2 oj-lg-1 oj-md-0 oj-sm-0"></div>
+
+  </div>
+  <!-- This injects script tags for the main javascript files -->
+		<!-- injector:scripts -->
+		<!-- endinjector -->
+</body>
+
+</html>
